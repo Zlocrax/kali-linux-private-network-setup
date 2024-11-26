@@ -23,7 +23,7 @@ open your terminal and check your current mac address with ifconfig.
 
 after please follow these steps to set up auto macchange (you'll have to get the file path to macchange.sh after creating the shell script)
 
-open an empty nano file then copy the macchane.sh script in please make sure you choose the right network interface remember to use ifconfig to get the network interface you are using.
+open an empty nano file then copy the macchange.sh script in please make sure you choose the right network interface remember to use ifconfig to get the network interface you are using.
 
 next make the shell script executable with 
 
