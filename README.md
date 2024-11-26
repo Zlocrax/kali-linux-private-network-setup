@@ -23,22 +23,7 @@ open your terminal and check your current mac address with ifconfig.
 
 after please follow these steps to set up auto macchange (you'll have to get the file path to macchange.sh after creating the shell script)
 
-open an empty nano file then write this script in please make sure you choose the right network interface remember to use ifconfig to get the network interface you are using.
-
-SCRIPT:
-
-#!/bin/bash
-# Replace "interface_name" with your network interface name
-interface_name="wlan0"
-
-# disable the network interface
-sudo ifconfig $interface_name down
-
-# change the mac address to a random address
-sudo macchanger -r $interface_name
-
-# re-enable the network interface
-sudo ifconfig $interface_name up
+open an empty nano file then copy the macchane.sh script in please make sure you choose the right network interface remember to use ifconfig to get the network interface you are using.
 
 next make the shell script executable with 
 
@@ -52,9 +37,9 @@ sudo crontab -e
 
 this will open the crontab in your default text editor. 
 
-add this at the bottom of the file (remember to change the path to your macchange.sh file)
+add this at the bottom of the file (remember to change the path to your macchange.sh file) remove the dot
 
-# replace "0 2 * * *" with your desired schedule (this runs the script at 2 am every day)
+.# replace "0 2 * * *" with your desired schedule (this runs the script at 2 am every day)
 0 2 * * * /path/to/your/macchange.sh 
 
 In the above line, "0 2 * * *" represents the schedule. change the 2 to the time you want the macchange to take place
@@ -101,7 +86,7 @@ VPN SERVER:
 
 first install the file for OpenVPN software with
 
-wget https://git.io/vpn -O openvpn-install.sh
+wget https://<i></i>git.io/vpn -O openvpn-install.sh
 
 now give permission to run this cmd with 
 
@@ -113,7 +98,7 @@ sudo ./openvpn-install.sh
 
 now the script will ask for your public ip address if it does not do it automatically please put it in manually with 
 
-curl -s http://tnx.nl/ip
+curl -s http://<i></i>tnx.nl/ip
 
 now we need to choose the connection type it does reccomend UDP so use it in my opinion 
 
