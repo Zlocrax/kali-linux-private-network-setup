@@ -31,13 +31,13 @@ SCRIPT:
 # Replace "interface_name" with your network interface name
 interface_name="wlan0"
 
-# Disable the network interface
+# disable the network interface
 sudo ifconfig $interface_name down
 
-# Change the MAC address to a random address
+# change the mac address to a random address
 sudo macchanger -r $interface_name
 
-# Re-enable the network interface
+# re-enable the network interface
 sudo ifconfig $interface_name up
 
 next make the shell script executable with 
@@ -54,7 +54,7 @@ this will open the crontab in your default text editor.
 
 add this at the bottom of the file (remember to change the path to your macchange.sh file)
 
-# Replace "0 2 * * *" with your desired schedule (this runs the script at 2 AM every day)
+# replace "0 2 * * *" with your desired schedule (this runs the script at 2 am every day)
 0 2 * * * /path/to/your/macchange.sh 
 
 In the above line, "0 2 * * *" represents the schedule. change the 2 to the time you want the macchange to take place
@@ -150,7 +150,7 @@ now we can conmect to our VPN server from anywhere.
 
 you need the OpenVPN file in the connecting device. OpenVPN client is available for almost every major operating system for free. you can run the ovpn file using OpenVPN software in Windows, Mac, Linux, Android, iOS etc.
 
-AND THAT MY FRIENDS IS HOW TO SET UP KALI LINUX AS A PRIVATE SERVER FOR YOUR HOME NETWORK (macchange should automate the mac change on your network for the time you set it, bind9 will route your network through the private dns server we set bypassing your network firewall, and the OpenVPN server will output a connection for all your devices to connect to to be able to stay private encrypted from anywhere you are in the world)
+AND THAT MY FRIENDS IS HOW TO SET UP KALI LINUX AS A PRIVATE SERVER FOR YOUR HOME NETWORK (macchange should automate the mac change on your network for the time you set it, bind9 will route your network through the private dns server we set bypassing your network firewall and the OpenVPN server will output a connection for all your devices to connect to to be able to stay private/ encrypted from anywhere you are in the world
 
 enjoy
 
